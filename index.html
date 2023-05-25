@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+</div>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="input">
+            <button onclick="clr()">Cl</button>
+            <button onclick="del()">DEL</button>
+            <button onclick="dis('%')">%</button>
+            <button onclick="dis('/')">/</button>
+            <button onclick="dis('7')">7</button>
+            <button onclick="dis('8')">8</button>
+            <button onclick="dis('9')">9</button>
+            <button onclick="dis('*')">*</button>
+            <button onclick="dis('4')">4</button>
+            <button onclick="dis('5')">5</button>
+            <button onclick="dis('6')">6</button>
+            <button onclick="dis('-')">-</button>
+            <button onclick="dis('1')">1</button>
+            <button onclick="dis('2')">2</button>
+            <button onclick="dis('3')">3</button>
+            <button onclick="dis('+')">+</button>
+            <button onclick="dis('.')">.</button>
+            <button onclick="dis('0')">0</button>
+            <button onclick="Calculator('')" class="equal">=</button>
+        </div>
+    </div> 
+ 
+    <script>
+      function dis(x) {
+        document.getElementById("input").value += x;
+        }
+
+        function clr(){
+            document.getElementById("input").value = "";
+
+        }
+        function del(){
+
+            document.getElementById("input").value = document.getElementById("input").value.slice(0,-1)
+        }
+        
+        function Calculator(){
+          try{
+            document.getElementById("input").value = eval(document.getElementById("input").value)
+          }
+          catch (err)
+           {
+               alert("Invalid")
+           } 
+        }
+
+        function myFunction() {
+        var element = document.getElementById("hhi");
+        element.classList.toggle("dark-mode");
+}
+
+    </script>
+        
+</body>
+</html>
